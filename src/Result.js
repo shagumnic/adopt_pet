@@ -1,14 +1,14 @@
 import { navigate } from '@reach/router';
 import React from 'react';
-import { useStore } from './store';
+//import { useStore } from './store';
 
 function Results(results) {
-    const {state, dispatch} = useStore();
+    //const {state, dispatch} = useStore();
     const [currentPage, setCurrentPage] = React.useState(1);
     const [postsPerPage] = React.useState(10);
     const animal_list = results.location.state.results;
     //dispatch({newResults:animal_list});
-    alert(JSON.stringify(state, null, 2));
+    //alert(JSON.stringify(state, null, 2));
     if (animal_list && animal_list.length) {
         const indexOfLastPost = currentPage * postsPerPage;
         const indexOfFirstPost = indexOfLastPost - postsPerPage;
