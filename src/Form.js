@@ -47,8 +47,8 @@ const Form = withFormik({
     const body = await response.json();
     
     const results = body.results.filter(result =>  result.age < values.maxAge && result.breed === values.breed && result.location === values.zipCode);
-    alert(JSON.stringify(values, null, 2));
-    alert(JSON.stringify(results, null, 2));
+    //alert(JSON.stringify(values, null, 2));
+    //alert(JSON.stringify(results, null, 2));
     setSubmitting(false);
     navigate("/result", {state: {results}});
   },
