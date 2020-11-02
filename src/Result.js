@@ -7,7 +7,7 @@ function Results(results) {
     const [currentPage, setCurrentPage] = React.useState(1);
     const [postsPerPage] = React.useState(10);
     const animal_list = results.location.state.results;
-    dispatch({newResults:animal_list});
+    //dispatch({newResults:animal_list});
     alert(JSON.stringify(state, null, 2));
     if (animal_list && animal_list.length) {
         const indexOfLastPost = currentPage * postsPerPage;
