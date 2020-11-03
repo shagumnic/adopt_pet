@@ -1,7 +1,11 @@
 ﻿
 ## How to run
 
-In each of the "server" directory and the project directory, you can run:
+In the project directory, run:
+
+### `npm install`
+
+Then, in each of the "server" directory and the project directory, you can run:
 
 ### `npm start`
 
