@@ -15,30 +15,6 @@ const AnimalProvider = ({children}) => {
     )
 }
 
-// Class Component Version
-/*
-class AnimalProvider extends React.Component {
-    state = {
-        animal: {}
-    }
-
-    setAnimal = (animal) => {
-        this.setState((prevState) => ({animal}))
-    }
-
-    render() {
-        const {children} = this.props;
-        const {animal} = this.state;
-        const {setAnimal} = this;
-        return (
-            <AnimalStore.Provider value={{animal, setAnimal}}>
-                {children}
-            </AnimalStore.Provider>
-        )
-    }   
-}
-*/
-
 export { AnimalProvider };
 
 export default AnimalStore;

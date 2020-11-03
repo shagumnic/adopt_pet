@@ -5,7 +5,7 @@ import Form from "./Form";
 import Result from "./Result";
 import Detail from "./Detail";
 import { Router, Link } from "@reach/router";
-//import { AnimalProvider } from "./AnimalStore";
+import { AnimalProvider } from "./AnimalStore";
 
 
 const zipCodeValidation = zipCode => {
@@ -61,9 +61,9 @@ const initialValues = {
 };
 
 function App() {
-  //const picked_animal = {breed: '', name: '', age: '', location: '', picture: '', description: ''}
+  const picked_animal = {breed: '', name: '', age: '', location: '', picture: '', description: ''}
   return (
-    //<AnimalProvider value={picked_animal}>
+    <AnimalProvider value={picked_animal}>
       <div>
         <nav className="site-nav family-sans navbar navbar-expand bg-primary navbar-dark higher">
           <div className='navbar-nav ml-auto'>
@@ -78,7 +78,7 @@ function App() {
           <Detail path="/detail"/>
         </Router>
       </div>
-    //</AnimalProvider>
+    </AnimalProvider>
   );
 }
 
