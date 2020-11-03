@@ -1,5 +1,4 @@
 import React from 'react';
-//import { useStore } from './store';
 
 function FillOut({
   errors,
@@ -42,7 +41,7 @@ function FillOut({
               </div>
               <div className="requirement">
                 For the form to be valid:
-                <ul class="list-group">
+                <ul className="list-group">
                     <li className="list-group-item">Zip code must be valid</li>
                     <li className="list-group-item">Age must be between a valid number greater than 0</li>
                 </ul>
@@ -67,7 +66,9 @@ function FillOut({
                           onChange={handleChange}
                           onBlur={handleBlur}
                         />
-                        {touched.zipCode && errors.zipCode}
+                        {touched.zipCode && errors.zipCode ? (
+                          <div className="alert alert-warning">{errors.zipCode}</div>
+                        ): null}
                       </section>
                   </div>
                   <div className="form-row d-flex justify-content-center">
@@ -90,7 +91,9 @@ function FillOut({
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
-                      {touched.maxAge && errors.maxAge}
+                      {touched.maxAge && errors.maxAge ? (
+                          <div className="alert alert-warning">{errors.maxAge}</div>
+                        ): null}
                       
                     </section>
                   </div>
@@ -121,7 +124,9 @@ function FillOut({
                             </option>
                           )) : null}
                         </select>
-                        {touched.animal && errors.animal}
+                        {touched.animal && errors.animal ? (
+                          <div className="alert alert-warning">{errors.animal}</div>
+                        ): null}
                     </section>
                   </div>
                   <div className="form-row d-flex justify-content-center">
@@ -151,7 +156,9 @@ function FillOut({
                                   </option>
                             )) : null}
                         </select>
-                        {touched.breed && errors.breed}
+                        {touched.breed && errors.breed ? (
+                          <div className="alert alert-warning">{errors.breed}</div>
+                        ): null}
                     </section>
                   </div>
                   
