@@ -1,0 +1,5 @@
+{
+    "dog": {"breed" : ["husky", "bulldog", "poodle"]},
+    "cat": {"breed" : ["persian", "ragdoll", "sphynx"]},
+    "fox": {"breed" : ["fennec", "red", "artic"]}
+}
